@@ -1,0 +1,19 @@
+Задать Имя и емайл
+git config --global user.name "Tara Routray"
+git config --global user.email "dev@tararoutray.com"
+
+git status - Просмотреть статус нужного репозитория можно по ключевому слову status: его действие распространяется на подготовленные, неподготовленные и неотслеживаемые файлы.
+ssh-keygen -o - Создать ключ ssh
+git init - инициализация с ГИт
+
+git remote -v - Посмотрерть какие удаленные репозитории добавленны 
+
+git remote add origin git@github.com:svbelykh1/go1-2.git - Связать удаленный репозиторий 
+
+git remote -v - Посмотрерть какие удаленные репозитории добавленны 
+fetch - позволяет забрать 
+push - позволяет пушить
+
+git push origin master - Пушим в веткеу мастер 
+
+

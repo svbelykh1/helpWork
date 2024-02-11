@@ -1,0 +1,12 @@
+----Переходим в папку и из командной строки запускаем 
+	mysql -usvbelykh -pGAshikonega1
+
+----Создана БД mydql 
+	CREATE DATABASE test_db;
+----пользователь mysql 
+	CREATE USER 'svbelykh'@'%' IDENTIFIED BY 'GAshikonega1';
+----Таблица Для тестов  
+	select * from tmpr_sv_test_table ;
+	Create table tmpr_sv_test_table(id INT AUTO_INCREMENT PRIMARY KEY, test_str varchar(255));
+---- Права пользователю 
+	GRANT ALL PRIVILEGES ON test_db.* TO 'svbelykh'@'%' WITH GRANT OPTION;
