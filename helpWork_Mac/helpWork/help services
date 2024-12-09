@@ -1,0 +1,132 @@
+-- посмотреть статусы nginx и запустить ее
+
+brew services
+brew services start nginx
+Конфиг тут .. /opt/homebrew/etc/nginx
+-- brew services start mysql
+-- nginx -s stop
+-- nginx -s reload
+brew services start php
+Смотрит сюда Sites/yeticave/mySite/public_html
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ERRORS
+Запускаем brew services
+Если видим ошибку 256 при запуске nginx .. под пользователем останавливаем службу(brew services stop nginx)  и запускаем заново(brew services start nginx)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+AMPPS
+login:      svbelykh
+password:   доменный мтс
+
+connect MYSQL AMPPS
+
+//Applications/AMPPS/apps/mysql/bin/mysql -u root -pmysql
+/Applications/AMPPS/apps/mysql/bin/mysql -u svbelykh -pQq123456
+--------------------------------------------------------------------------------------
+Connect TIMEWEB
+
+ssh cy08017@vh378.timeweb.ru
+Pass - стандартный "GA***1"
+-------------------------------------------------------------------------------------
+Выдать права пользователю на файл
+
+chown svbelykh index.php
+-------------------------------------------------------------------------------------
+Настройка VScode по sftp с time web
+
+Ссылка от команды TIMEWEB  - https://aie24.ru/states/ftp-sftp-vs-code/
+
+Конфиг sftp модуля в VSCode(sftp.json)
+
+{
+    "name": "timeweb1",
+    "host": "92.53.96.242",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "cy08017",
+    "remotePath": "/home/c/cy08017",
+    "uploadOnSave": true,
+    "useTempFile": false,
+    "openSsh": false
+}
+
+
+---------------------------------------------------------------------------------------
+Подключение к timeweb по shh +mysql
+ssh cy08017@92.53.96.242
+mysql -ucy08017_23 -p
+Use cy08017_23;
+
+---------------------------------------------------------------------------------------
+Создание пользователя и выдача прав Mysql
+
+CREATE USER 'svbelykh'@'localhost' IDENTIFIED BY 'Qq123456';
+GRANT ALL ON publications.* TO 'svbelykh'@'localhost';
+---------------------------------------------------------------------------------------
+создание таблиц под пользователей
+/* Создание базы данных */
+
+CREATE DATABASE userlistdb;
+
+/* Создание таблицы */
+
+CREATE TABLE `usertbl` (
+`id` int(11) NOT NULL auto_increment,
+`full_name` varchar(32) collate utf8_unicode_ci NOT NULL default '',
+`email` varchar(32) collate utf8_unicode_ci NOT NULL default '',
+`username` varchar(20) collate utf8_unicode_ci NOT NULL default '',
+`password` varchar(32) collate utf8_unicode_ci NOT NULL default '',
+PRIMARY KEY  (`id`),
+UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+insert into usertbl (full_name,email,username,password)VALUES('test testov testovich','test@test.ru','test','qwerty');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	7
+
+------------------------	
+			|
+			|
+			|  5
+			|
+			|
+
+
+1L = 10m2
+
+7*5 /10 = 3,5
+
+
+
+
+
+
