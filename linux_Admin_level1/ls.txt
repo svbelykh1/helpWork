@@ -1,0 +1,1 @@
+lrwxrwxrwx 1 root root 7 апр 22  2024 /bin -> usr/bin
